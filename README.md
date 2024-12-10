@@ -11,17 +11,17 @@ Le projet s'appuie sur les travaux de Madame LOISEL et Monsieur PINDER réalisé
 ## Définitions
 - Ramping : Capacité d'une installation à faire varier sa production :
   - Pmax/min(t=h) = +/- Ramping * P(t=h-1)
-- Effacement : Excès ou défaut d'énergie non compensable.
-  - Effacement positif : défaut de production.
-  - Effacement négatif : surproduction.
+- Effacement : Excès ou défaut d'énergie non compensable
+  - Effacement positif : défaut de production
+  - Effacement négatif : surproduction
 - Soldes échanges : Différence entre exportations et importations :
 SE(t=h) = exportations(t=h) - importations(t=h)
-- Variation nécessaire : Demande de variation de production aux usines pilotables.
+- Variation nécessaire : Demande de variation de production aux usines pilotables
   - Si positive alors variation nécessaire à la hausse
   - Si négative alors variation nécessaire à la baisse
-- STEP (Station de Transfert d'Énergie par Pompage) : Système de stockage d'énergie par pompage-turbinage.
-- Thermique décarboné : Production thermique utilisant de l'hydrogène produit par électrolyse.
-- Facteur de Capacité (FC) : Ratio d'utilisation d'une installation.
+- STEP (Station de Transfert d'Énergie par Pompage) : Système de stockage d'énergie par pompage-turbinage
+- Thermique décarboné : Production thermique utilisant de l'hydrogène produit par électrolyse
+- Facteur de Capacité (FC) : Ratio d'utilisation d'une installation
 
 ## Navigation
 
@@ -38,33 +38,33 @@ SE(t=h) = exportations(t=h) - importations(t=h)
 <img src="README_Pic/Nav_3.png" alt="plot" width="900">
 
 ## Principales hypothèses
-- Nucléaire : 66% en base, 33% flexible.
+- Nucléaire : 66% en base, 33% flexible
 - Disponibilité annuelle du parc nucléaire :
   - Décembre-Mars : 91%
   - Mars-Mai : 80%
   - Mai-Novembre : 67%
   - Novembre-Décembre : 80%
-- Ancien thermique : 80% gaz, 20% pétrole.
-- Facteur de capacité : gaz ≈ 30%, pétrole ≈ 10%.
-- Capacité d'export : 1.4 * capacité d'import.
-- Facteur de capacité STEP : ≈ 20%.
-- Pertes réseau : 7%.
+- Ancien thermique : 80% gaz, 20% pétrole
+- Facteur de capacité : gaz ≈ 30%, pétrole ≈ 10%
+- Capacité d'export : 1.4 * capacité d'import
+- Facteur de capacité STEP : ≈ 20%
+- Pertes réseau : 7%
 
 ## Description
 Le simulateur modélise le dispatching des générateurs programmables et intermittents au pas horaire sur une année (2050). Il reproduit le fonctionnement du marché d'électricité selon l'ordre de mérite des coûts marginaux de production.
 
 ### Entrées :
-- Capacités installées en début d'année.
-- Facteurs de capacité horaires pour l'hydroélectricité, l'éolien (terrestre et marin) et le solaire.
-- Contraintes opérationnelles (ramping, seuils minimaux).
-- Interconnexions import-export.
-- Profil horaire de la demande.
-- Taux de pertes.
+- Capacités installées en début d'année
+- Facteurs de capacité horaires pour l'hydroélectricité, l'éolien (terrestre et marin) et le solaire
+- Contraintes opérationnelles (ramping, seuils minimaux)
+- Interconnexions import-export
+- Profil horaire de la demande
+- Taux de pertes
 ### Sorties :
-- Production horaire par technologie.
-- Flux import-export.
-- Effacement horaire de l'offre.
-- Manques d'offre ponctuels.
+- Production horaire par technologie
+- Flux import-export
+- Effacement horaire de l'offre
+- Manques d'offre ponctuels
 - Cycles de charge /décharge du parc de batteries
 
 Le simulateur respecte l'équilibre entre l'offre et la demande tout en prenant en compte les contraintes opérationnelles des centrales et la disponibilité des facteurs naturels.
