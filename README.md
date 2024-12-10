@@ -17,6 +17,8 @@ Le projet s'appuie sur les travaux de Madame LOISEL et Monsieur PINDER réalisé
 - Soldes échanges : Différence entre exportations et importations :
 SE(t=h) = exportations(t=h) - importations(t=h)
 - Variation nécessaire : Demande de variation de production aux usines pilotables.
+  - Si positive alors variation nécessaire à la hausse
+  - Si négative alors variation nécessaire à la baisse
 - STEP (Station de Transfert d'Énergie par Pompage) : Système de stockage d'énergie par pompage-turbinage.
 - Thermique décarboné : Production thermique utilisant de l'hydrogène produit par électrolyse.
 - Facteur de Capacité (FC) : Ratio d'utilisation d'une installation.
